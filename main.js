@@ -35,6 +35,6 @@ app.post('/firebase/notification', (req, res) => {
 
 })
 
-app.listen(80, () => {
-    console.log("listening to port 80")
+app.listen(3000, () => {
+    console.log("listening to port 3000")
 })
