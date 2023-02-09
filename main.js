@@ -15,8 +15,8 @@ app.post('/firebase/notification', (req, res) => {
 
     const message = {
         data: {
-            title: req.data.title,
-            body: req.data.body
+            title: req.body.data.title,
+            body: req.body.data.title
         },
         topic: "annonce"
     };
