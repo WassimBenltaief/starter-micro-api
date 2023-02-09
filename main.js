@@ -11,7 +11,6 @@ const app = express()
 app.use(bodyparser.json())
 
 app.post('/firebase/notification', (req, res) => {
-    console.log(req)
     const message = {
         data: {
             title: req.body["title"],
@@ -22,7 +21,7 @@ app.post('/firebase/notification', (req, res) => {
 
     admin.messaging().send(message)
         .then(response => {
-            res.status(200).send("Notification sent successfully")
+            res.status(200).send("Notification sent successfully" + response)
         })
         .catch(error => {
             console.log(error);
