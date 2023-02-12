@@ -17,6 +17,10 @@ app.use(cors({
     origin: '*'
 }));
 
+app.get("/", (res) => {
+    return "Hello from GET Request";
+});
+
 app.post('/firebase/notification', (req, res) => {
     const message = {
         data: {
